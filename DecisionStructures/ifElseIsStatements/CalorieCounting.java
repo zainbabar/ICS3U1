@@ -1,4 +1,4 @@
-package ifElseIsStatements;
+package IfElseIsStatements;
 import java.util.Scanner;
 
 public class CalorieCounting {
