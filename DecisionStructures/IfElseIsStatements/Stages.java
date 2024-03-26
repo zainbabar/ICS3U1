@@ -1,9 +1,9 @@
-package IfElseIsStatements;
+
 import java.util.Scanner;
 
 public class Stages {
     public static void main(String[] args) {
-        Scanner scan = new Scanner(System.in); // Declare and initialize the Scanner object
+        Scanner scan = new Scanner(System.in); 
       
         System.out.println("Enter your age");
         int age = scan.nextInt();

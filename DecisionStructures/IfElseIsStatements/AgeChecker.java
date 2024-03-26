@@ -1,4 +1,4 @@
-package IfElseIsStatements;
+
 import java.util.Scanner;
 class AgeChecker {
   public static void main (String[] args ) {

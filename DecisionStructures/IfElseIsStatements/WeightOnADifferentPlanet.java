@@ -1,4 +1,4 @@
-package IfElseIsStatements;
+
 import java.util.Scanner;
 
 public class WeightOnADifferentPlanet {
