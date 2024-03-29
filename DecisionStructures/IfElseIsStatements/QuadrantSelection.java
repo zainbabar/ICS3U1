@@ -11,9 +11,6 @@ public class QuadrantSelection {
         System.out.println("Enter the y coordiante");
         int y = scan.nextInt();
 
-        if (x == 0 || y == 0){
-        System.out.println("The coordinates cannot be zero.");
-        }
         
         if (x > 0){
             if (y > 0){
