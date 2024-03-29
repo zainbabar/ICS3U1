@@ -5,7 +5,7 @@ public class RockPaperScissors {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         System.out.println("Enter your choice (r = Rock, p = Paper, s = Scissors)");
-        String input = scan.next().toLowerCase();
+        String playerChoice = scan.next().toLowerCase(); // scan to lowercase to it doesnt matter the case of the input
 
         String computerChoice;
         Random rand = new Random();
@@ -21,14 +21,14 @@ public class RockPaperScissors {
         }
 
         System.out.println("Computer's choice: " + computerChoice);
-        System.out.println("Your throw: " + input);
+        System.out.println("Your choice: " + playerChoice);
 
         // if same then tie 
 
-        if (input.equals(computerChoice)){
+        if (playerChoice.equals(computerChoice)){
             System.out.println("It's a tie!");
         }
-        else if (input.equals("r")){
+        else if (playerChoice.equals("r")){
             // if not same then check who wins if computer chooses p then computer wins if person chooses s then person wins
             if (computerChoice.equals("p")){
                 System.out.println("Computer wins!");
@@ -37,7 +37,7 @@ public class RockPaperScissors {
                 System.out.println("You win!");
             }
         }
-        else if (input.equals("p")){
+        else if (playerChoice.equals("p")){
             if (computerChoice.equals("s")){
                 System.out.println("Computer wins!");
             }
@@ -45,7 +45,7 @@ public class RockPaperScissors {
                 System.out.println("You win!");
             }
         }
-        else if (input.equals("s")){
+        else if (playerChoice.equals("s")){
             if (computerChoice.equals("r")){
                 System.out.println("Computer wins!");
             }
@@ -56,12 +56,5 @@ public class RockPaperScissors {
         else {
             System.out.println("Invalid input.");
         }
-        
-        
-        
-
-        
-
-
     }    
 }
