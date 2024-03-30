@@ -4,7 +4,7 @@ import java.util.Scanner;
 public class CalorieCounting {
    public CalorieCounting() {
    }
-
+   
    public static void main(String[] var0) {
       Scanner scan = new Scanner(System.in);
       int totalCalories = 0;
