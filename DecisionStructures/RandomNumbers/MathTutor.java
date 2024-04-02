@@ -68,6 +68,8 @@ public class MathTutor {
                 System.out.println("Incorrect! The Correct answer is " + answer + ".");
             }
 
+            scan.close();
+
         } 
     }
 }
