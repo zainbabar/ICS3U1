@@ -10,9 +10,11 @@ public class DateFashion {
 
         if (yourStyle <= 2 || dateStyle <= 2) {
             System.out.println("no");
-        } else if (yourStyle >= 8 || dateStyle >= 8) {
+        } 
+        else if (yourStyle >= 8 || dateStyle >= 8) {
             System.out.println("yes");
-        } else {
+        } 
+        else {
             System.out.println("maybe");
         }
     }

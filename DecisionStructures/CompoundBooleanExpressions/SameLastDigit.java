@@ -14,7 +14,7 @@ public class SameLastDigit {
         int c = scan.nextInt();
 
 
-        if (c % 10 == b % 10 || a % 10 == c % 10){
+        if (c % 10 == b % 10 || a % 10 == c % 10 || a % 10 == b % 10){
             System.out.println("true");
         }
 
