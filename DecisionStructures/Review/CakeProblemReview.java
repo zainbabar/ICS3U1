@@ -17,9 +17,9 @@ public class CakeProblemReview {
 
         scan.close();
 
-        if (eggs < 3 || flour < 2 || milk < 1){
-            System.out.println("You can make 0 cake(s).");
-        } else if (eggs < flour && eggs < milk){
+        // if (eggs < 3 || flour < 2 || milk < 1){
+        //     System.out.println("You can make 0 cake(s).");
+        if (eggs < flour && eggs < milk){
             cakes = eggs;
         } else  if (milk < flour && milk < eggs){
             cakes = milk;
