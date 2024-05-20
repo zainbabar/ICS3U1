@@ -8,11 +8,17 @@ public class GuessingGame {
         int r = random.nextInt(1, 20);
         int n;
         int i = 0;
-        boolean end = false; 
         do {
             System.out.println("enter a nubmer between 1 and 20: ");
             n = scan.nextInt();
-            if (n > r){
+            if (n == r){
+                System.out.println("you got it");
+                i = 5;
+            }
+            else if (i == 5){
+                System.out.println("out of guesses");
+            }
+            else if (n > r){
                 System.out.println("too high");
             }
             else if (n < r){
