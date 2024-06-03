@@ -1,90 +1,49 @@
-import java.util.Scanner;   
+import java.util.Scanner;
+import java.util.HashMap;
+import java.util.ArrayList;
+import java.util.Map;
 
 public class ISpeakTXTMSG {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
-        
-        String input;
 
-        String words = "";
+        HashMap<String, String> map = new HashMap<>();
+        ArrayList<String> words = new ArrayList<>();
 
-        String[] wordStrings;
+        map.put("CU", "see you");
+        map.put(":-)", "I'm happy");
+        map.put(":-(", "I'm unhappy");
+        map.put(";-)", "wink");
+        map.put(":-P", "stick out my tongue");
+        map.put("(~.~)", "sleepy");
+        map.put("TA", "totally awesome");
+        map.put("CCC", "Canadian Computing Competition");
+        map.put("CUZ", "because");
+        map.put("TY", "thank-you");
+        map.put("YW", "you're welcome");
+        map.put("TTYL", "talk to you later");
+
+        String text;
 
         do {
-            input = scan.nextLine();
-            if (input.equals("CU")){
-                words = words + " " + ("see you");
-            }
-            if (input.equals(":-)")){
-                words = words + " " + ("I'm happy");
-            }
-            if (input.equals(":-()")){
-                words = words + " " + ("I'm unhappy");
-            }
-            if (input.equals(";-)")){
-                words = words + " " + ("wink");
-            }
-            if (input.equals(":-P")){
-                words = words + " " + ("stick out my tounge");
-            }
-            if (input.equals("(~.~)")){
-                words = words + " " + ("sleepy");
-            }
-            if (input.equals("TA")){
-                words = words + " " + ("totally awesome");
-            }
-            if (input.equals("CCC")){
-                words = words + " " + ("Canadian Computing Competition");
-            }
-            if (input.equals("CUZ")){
-                words = words + " " + ("because");
-            }
-            if (input.equals("TY")){
-                words = words + " " + ("thank-you");
-            }
-            if (input.equals("YW")){
-                words = words + " " + ("you're welcome");
-            }
-        } while (!(input.equals("TTYL")));
-        words = words + " " + ("talk to you later");
+            text = scan.nextLine();
+            words.add(text);
+        } while (text.equals("TTYL") == false);
 
-        wordStrings = words.split(" ");
-        System.out.println(wordStrings);
+        for (int i = 0; i < words.size(); i++){
+            if (map.containsKey(words.get(i))){
+                for (Map.Entry<String, String> entry : map.entrySet()) {
+                    if (words.get(i).equals(entry.getKey())){
+                        System.out.println(entry.getValue());
+                    }
+                }
+            }
 
-        for (int i = 0; i < wordStrings.length; i++){
-            if (wordStrings[i].equals("CU")){
-                System.out.println("see you");
-            }
-            if (wordStrings[i].equals(":-)")){
-                System.out.println("I'm happy");
-            }
-            if (wordStrings[i].equals(":-()")){
-                System.out.println("I'm unhappy");
-            }
-            if (wordStrings[i].equals(";-)")){
-                System.out.println("wink");
-            }
-            if (wordStrings[i].equals(":-P")){
-                System.out.println("stick out my tounge");
-            }
-            if (wordStrings[i].equals("(~.~)")){
-                System.out.println("sleepy");
-            }
-            if (wordStrings[i].equals("TA")){
-                System.out.println("totally awesome");
-            }
-            if (wordStrings[i].equals("CCC")){
-                System.out.println("Canadian Computing Competition");
-            }
-            if (wordStrings[i].equals("CUZ")){
-                System.out.println("because");
-            }
-            if (wordStrings[i].equals("TY")){
-                System.out.println("thank-you");
-            }
-            if (wordStrings[i].equals("YW")){
-                System.out.println("you're welcome");
+            else {
+                    System.out.println(words.get(i));
             }
         }
+
+        scan.close();
     }
 }
